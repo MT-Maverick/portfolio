@@ -1,2 +1,2 @@
 # website1
-live webpaje1
+live webpage1
