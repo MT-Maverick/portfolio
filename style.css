@@ -1,0 +1,98 @@
+/*burgur-menu*/
+.menu-icon{
+    top:4%;
+    right: 1%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 50px;
+}
+
+.menu-icon::before,
+.menu-icon::after,
+.menu-icon div{
+    background: grey;
+    content: "";
+    display: block;
+    height: 6px;
+    border-radius: 3px;
+    margin: 7px;
+    transition: 0.5s;
+}
+
+.menu-icon:hover:before{
+    transform: translateY(12px) rotate(135deg);
+}
+
+
+.menu-icon:hover:after{
+    transform: translateY(-12px) rotate(-135deg);
+}
+
+
+.menu-icon:hover div{
+    transform:scale(0);
+}
+
+/*menu-bar*/
+#menu-bar{
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    background-color: rgb(20, 20, 20);
+    border-radius: 9%;
+    padding: 0%;
+    
+
+    cursor: pointer;
+
+    animation-name: load;
+    animation-duration: 7s;
+}
+
+
+
+/*menu content*/
+ul{
+    list-style-type: none;
+}
+
+li{
+    color: white;
+}
+li:hover{
+    color: grey;
+    transition-delay: 0.3s;
+    transition-duration: 1s;   
+}
+
+
+#header{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+
+    background-image: url(image.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.95;
+
+    
+    animation-name: load;
+    animation-duration: 4s;
+    
+}
+.profile-pic{
+    border-radius: 45%;
+    position: relative;
+    max-width: 18%;
+    opacity: 1;
+}
+.info{
+    color: grey;
+}
+
+@keyframes load {
+    from{ opacity: 0;}
+    to{opacity: 1;}    
+}
