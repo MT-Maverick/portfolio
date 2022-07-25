@@ -131,8 +131,9 @@ a:hover{
     to{opacity: 0.89;}    
 }
 
-#Workxp{
+#Work_experience{
    display:flex;
    justify-content: space-around;
    align-items: center;
+   background-color:black;
 }
