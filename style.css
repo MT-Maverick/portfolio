@@ -132,8 +132,5 @@ a:hover{
 }
 
 #Work_experience{
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-   background-color:rgb(225,225,225);
+   background-color:black;
 }
