@@ -131,7 +131,7 @@ a:hover{
     to{opacity: 0.89;}    
 }
 
-#Workxp_info{
+#Workxp{
    display:flex;
    justify-content: space-around;
    align-items: center;
