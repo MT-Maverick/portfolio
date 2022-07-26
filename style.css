@@ -134,7 +134,7 @@ a:hover{
 .mySlides{
  display:none;
 }
-img{
+.slide_images{
  vertical-align:middle;
 }
 .slideshow-container{
