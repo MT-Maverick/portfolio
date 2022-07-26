@@ -130,5 +130,11 @@ a:hover{
     from{ opacity: 0;}
     to{opacity: 0.89;}    
 }
-#footer{}
+/*SlideShow*/
+.mySlides{
+ display:none;
+}
+.slide_images{
+ vertical-align:middle;
+}
 
