@@ -127,6 +127,7 @@ a:hover{
     border-radius: 40%;
     position: relative;
     padding: 10%;
+   rounded-lg;
 }
 .info{
     color: rgb(114, 111, 111);
