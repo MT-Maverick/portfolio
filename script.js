@@ -1,31 +1,74 @@
-function openNav(){
-    document.getElementById("myNav").style.width ="100%";
+//method for contact detail animation:
+fotter();
+
+function fotter() {
+    
+    const inView = (object)=>{
+        object.forEach(element => {
+        element.target.classList.toggle('is-inViewport',element.isIntersecting);
+    });
+};
+
+const object = new IntersectionObserver(inView);
+
+const element = document.querySelectorAll('[data-inviewport]');
+element.forEach(el=>{
+    object.observe(el);
+});
 }
 
-function closeNav(){
-    document.getElementById("myNav").style.width="0%";
+//three.js code
+//essential three.js components:
+const canvas=document.getElementById('canvas');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+  70,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+
+camera.position.set(10,10,10);
+camera.lookAt(0,0,0);
+
+
+const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, });
+renderer.setClearColor(0x000000);
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+const geometry = new THREE.SphereGeometry(8,20,20);
+const material = new THREE.MeshNormalMaterial({wireframe:true});
+const shape = new THREE.Mesh(geometry,material);
+scene.add(shape);
+
+//animation method:
+update();
+
+function update() {
+    renderer.render(scene,camera);
+    shape.rotateY(0.003);
+    requestAnimationFrame(update);
+        
 }
 
 
-//For slides:
-let slideIndex =0;
-Slides();
+//morph object at set time:
+//setTimeout(()=>{ morph(shape,2,2);},8000);
 
-function Slides(){
- let i;
- let slides = document.getElementsByClassName("mySlides");
- let dots = document.getElementsByClassName("dot");
- 
- for(i=0;i<slides.length;i++){
-   slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if(slideIndex>slides.length){slideIndex =1}
- 
-  for(i=0;i<dots.length;i++){
-   dots[i].className = dots[i].className.replace(" active","");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  setTimeout(Slides,4000);
+
+//morph object method:
+function morph(object,width,height){
+let condition = false;
+let newGeometry = new THREE.SphereGeometry(8,width,height);
+let newMaterial = new THREE.MeshNormalMaterial({wireframe:condition});
+
+object.traverse((obj)=>{
+    
+    if(obj){
+        obj.geometry = newGeometry;
+        obj.material = newMaterial;
+    }
+
+});
+
 }
