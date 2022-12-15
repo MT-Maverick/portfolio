@@ -1,184 +1,60 @@
-#body{
-color:black;
-}
-
-/*burgur-menu*/
-.menu-icon{
-    top:3%;
-    right: 1%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    width: 50px;
-}
-.menu-icon::before,
-.menu-icon::after,
-.menu-icon div{
-    background: gray;
-    content: "";
-    display: block;
-    height: 7px;
-    border-radius: 3px;
-    margin: 4px;
-    transition: 0.5s;
-}
-
-/*overlay menu*/
-.overlay{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    background-color: rgb(128,128,128,0.5);
-    overflow-x: hidden;
-    transition: 0.7s ease-out;
-}
-.overlay-content{
-    position: absolute;
-    top: 50%;
-    width: 50%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a{
-    padding: 5%;
-    text-decoration: none;
-    font-size: 200%;
-    color: white;
-    display:flow-root;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus{
-    color: grey;
-}
-
-.overlay .closebtn{
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}
-
-@media screen and (max-height:450px) {
-    .overlay a {font-size: 100%;}
-    .overlay .closebtn{
-        font-size: 100%;
-        top:30%;
-        right: 30%;
-    }
-}
-/*menu-bar*/
-.menu{
-position: fixed;
-top: 0%;
-width 100%;
-margin-top: 30px;
-
-}
-/*#menu-bar{
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    background-color: rgb(20, 20, 20);
-    padding: 0%;
-    
-    cursor: pointer;
-
-    animation-name: load;
-    animation-duration: 7s;
-}
-*/
-
-
-/*menu content*/
 a{
-    color: white;
     text-decoration: none;
-}
-a:hover{
-    color: grey;
-    transition-delay: 0.3s;
-    transition-duration: 1s;   
+    color: white;
 }
 
-/*header content*/
-#header{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 5%;
+.container{
+    padding-top: 8%;
+    padding-top: 8%;
+}
+#contact{
+    background-color:rgb(64, 5, 119);
+    border-radius: 10%;
+}
+[data-inviewport]{
+    opacity: 0;
+}
 
-    background-image: url(5517869.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    opacity: 0.89;
+[data-inviewport="info"].is-inViewport{
+        opacity: 0;
+        animation: slide 3s cubic-bezier(1, 0, 0, 1)  normal forwards;
+}
+
+[data-inviewport="social"].is-inViewport{
+    opacity: 0;
+    animation: reverse-slide 2s cubic-bezier(1, 0, 0, 1)   normal forwards;
+}
+
+[data-inviewport="address"].is-inViewport{
+    opacity: 0;
+    animation: top-2-bottom 2s cubic-bezier(1, 0, 0, 1)  normal forwards;
+}
+
+@keyframes slide {
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(15%);}
+    }
     
-    background-position:center;
-
-    animation-name: load;
-    animation-duration: 4s;
-    
+    @keyframes reverse-slide {
+    from{
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(85%);}
 }
-#header-content{
-    display: flex;
-    justify-content:space-between ;
-    align-items: center;
-
-}
-.profile-pic{
-    border-radius: 40%;
-    position: relative;
-    padding: 10%;
-   rounded-lg;
-}
-.info{
-    color: rgb(114, 111, 111);
-    padding: 10%;
-}
-@keyframes load {
-    from{ opacity: 0;}
-    to{opacity: 0.89;}    
-}
-/*SlideShow*/
-.mySlides{
- display:none;
-}
-.slide_images{
- vertical-align:middle;
-}
-.slideshow-container{
- max-width:1000px;
- position: relative;
- margin: auto;
-}
-.dot{
- height: 15px;
- width: 15px;
- margin: 0 2px;
- background-color:grey;
- border-radius: 50%;
- display: inline-block;
- transition: background-color 0.6s ease;
-}
-.active{
- background-color: black;
-}
-
-.fade{
- animation-name: fade;
- animation-duration: 1.5s;
-}
-
-@keyframes fade{
- from {
- opacity: 0.4;
-}
- to{
- opacity: 1;
-}
-}
-#Contact {
-   color:black;
+@keyframes top-2-bottom {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);}
 }
