@@ -33,21 +33,21 @@ a{
 @keyframes slide {
     from{
         opacity: 0;
-        transform: translateX(-100%);
+        transform: translateX(0%);
     }
     to{
         opacity: 1;
-        transform: translateX(-50%);}
+        transform: translateX(50%);}
     }
     
     @keyframes reverse-slide {
     from{
         opacity: 0;
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
     to{
         opacity: 1;
-        transform: translateX(-50%);}
+        transform: translateX(50%);}
 }
 @keyframes top-2-bottom {
     from{
