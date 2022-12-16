@@ -36,7 +36,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alph
 renderer.setClearColor(0x000000);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-const geometry = new THREE.SphereGeometry(8,20,20);
+const geometry = new THREE.SphereGeometry(4,15,15);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
 scene.add(shape);
