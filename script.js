@@ -20,10 +20,12 @@ element.forEach(el=>{
 //three.js code
 //essential three.js components:
 const canvas=document.getElementById('canvas');
+const width =canvas.offsetWidth;
+const height =canvas.offsetHeight;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   70,
-  window.innerWidth / window.innerHeight,
+  width / height,
   0.1,
   1000
 );
@@ -34,7 +36,7 @@ camera.lookAt(0,0,0);
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true, });
 renderer.setClearColor(0x000000);
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(width, height);
 
 const geometry = new THREE.SphereGeometry(4,15,15);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
