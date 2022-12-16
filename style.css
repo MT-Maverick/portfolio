@@ -3,8 +3,11 @@ a{
     text-decoration: none;
     color: white;
 }
+#header{
+background-color:black
+}
 .container{
-padding-top:8%;
+padding-top:4%;
 
 }
 #contact{
