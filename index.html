@@ -9,63 +9,66 @@
 </head>
 <body>
     <div class="container">
-          <div data-inviewport="address" class="text">
-<center>
+        <div data-inviewport="top-2-bottom" class="header" class="text">
             <h1>
                 Welcome Visitor
             </h1>
-                <a href="#quotes">
-                    click here to view some of my favorite quotes
-                </a>
-</center>
-</div>
-<canvas id="canvas"></canvas>
-
-    </div>
-    <div id="aboutMe" class="container">
-        <p>About Me</p>
-    </div>
-    <div id="qualification" class="container">
-        <p>qualifications</p>
-    </div>
-    <div id="experience" class="container">
-        <p>experience</p>
-    </div>
-    <div id="quotes" class="container">
-        <p>quotes</p>
+            <div>
+                click here to morph shape
+        </div>
     </div>
     
-    <div id="contact" class="container">
+    <canvas id="canvas"></canvas>
+   
+</div>
+<div id="aboutMe" class="container" class="header"  class="text">
+    <p>About Me</p>
+</div>
+    <div id="qualification" class="container" class="header"  class="text">
+        <p>qualifications</p>
+    </div>
+    <div id="experience" class="container" class="header"  class="text">
+        <p>experience</p>
+    </div>
+    <div id="quotes" class="container" class="header"  class="text">
+        quotes
+    </div>
+    
+    <div id="contactInfo" class="container">
         
-        <div data-inviewport="info">
-            <a href="mailto:mfundosindane0@gmail.com"><p>Email: mfundosindane0@gmail.com</p></a>
-            <a href="tel:+27813126439"><p>Cellphone: 0813126439</p></a>
+        <div data-inviewport="slide" id="contactDetails">
+            <a href="mailto:mfundosindane0@gmail.com">Email: mfundosindane0@gmail.com</a>
+            <br>
+            <a href="tel:+27813126439">Cellphone: 0813126439</a>
         </div>
 
           <br/>
           
-         <div data-inviewport="social" id="social_links">
-            <a href="http://"><p>Github:</p></a>
-            <a href="http://"><p>LinkedIn:</p></a>
-            <a href="http://"><p>Instagram</p></a>
-            <a href="http://"><p>Twitter</p></a>
+         <div data-inviewport="reverse-slide" id="contactLinks">
+            <a href="http://">Github:</a>
+            <br>
+            <a href="http://">LinkedIn:</a>
+            <br>
+            <a href="http://">Instagram</a>
+            <br>
+            <a href="http://">Twitter</a>
             
         </div>
         <br/>
         
-        <div data-inviewport="address">
+        <div data-inviewport="top-2-bottom" id="address">
         <center>
             <p>Address
             <br/>13 Zinnia Street
             <br/>Riamarpark
-            <br/>Bronkhorstspruit
-            <br/>1020</p>
+            <br/>Bronkhorstspruit</p>
         </center>
         </div>
+
     </div>
 
 </body>
     
-<script src="three.js"></script>
-<script src="script.js"></script>
+<script src="./js/three.js"></script>
+<script src="./js/index.js"></script>
 </html>
