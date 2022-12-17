@@ -1,42 +1,51 @@
 body{
-background-color: black;
+    background-color: black;
 }
-
-.text{
-color:purple;
-position: absolute;
-z-index: 1;
+.header{
+    color: purple;
+    z-index: 1;
+    left: 35%;
 }
-
 a{
     text-decoration: none;
     color: white;
 }
-
 .container{
-padding-top:4%;
+    padding-top: 4%;
+}
+#contactInfo{
+    background-color:rgb(64, 5, 119);
+    padding-bottom: 15%;
+    margin: 0%;
+    border-radius: 5%;
 }
 
-#contact{
-    background-color:rgb(64, 5, 119);
-    border-radius: 10%;
+#contactDetails{
+left: 5%;
 }
+#contactLinks{
+left: 85%;
+}
+#address{
+left: 45%;
+}
+
 [data-inviewport]{
     opacity: 0;
-left:50%;
+    position: absolute;
 }
 
-[data-inviewport="info"].is-inViewport{
+[data-inviewport="slide"].is-inViewport{
         opacity: 0;
         animation: slide 3s cubic-bezier(1, 0, 0, 1)  normal forwards;
 }
 
-[data-inviewport="social"].is-inViewport{
+[data-inviewport="reverse-slide"].is-inViewport{
     opacity: 0;
     animation: reverse-slide 2s cubic-bezier(1, 0, 0, 1)   normal forwards;
 }
 
-[data-inviewport="address"].is-inViewport{
+[data-inviewport="top-2-bottom"].is-inViewport{
     opacity: 0;
     animation: top-2-bottom 2s cubic-bezier(1, 0, 0, 1)  normal forwards;
 }
@@ -48,17 +57,17 @@ left:50%;
     }
     to{
         opacity: 1;
-        transform: translateX(40%);}
+        transform: translateX(10%);}
     }
     
     @keyframes reverse-slide {
     from{
         opacity: 0;
-        transform: translateX(100%);
+        transform: translateX(0%);
     }
     to{
         opacity: 1;
-        transform: translateX(35%);}
+        transform: translateX(-10%);}
 }
 @keyframes top-2-bottom {
     from{
@@ -67,5 +76,5 @@ left:50%;
     }
     to{
         opacity: 1;
-        transform: translateY(-20%);}
+        transform: translateY(-10%);}
 }
