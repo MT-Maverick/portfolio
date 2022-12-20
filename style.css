@@ -72,8 +72,7 @@ a{
 
 #coverPhoto{
     
-    width:200px;
-    height:200;
+    object-fit:contain;
     border-radius:10%;
     opacity: 0.9;
  
