@@ -1,61 +1,39 @@
 body{
     background-color: black;
+    margin: 0%;
 }
 .header{
     color: purple;
-    position: absolute;
-    z-index: 1;
-    left: 40%;
+    justify-items: center;
 }
 a{
     text-decoration: none;
     color: white;
 }
+#canvas{
+    position:absolute;
+}
 .container{
-    padding-top: 5%;
-    padding-bottom: 5%;
-    
-}
-#aboutMe{
-    background-color:whitesmoke;
-    margin-top: 7%;
-    margin-bottom: 7%;
-    border-radius: 5%;
-}
-#qualification{
-    background-color:whitesmoke;
-    margin-top: 7%;
-    margin-bottom: 7%;
-    border-radius: 5%;
-}
-#experience{
-    background-color:whitesmoke;
-    margin-top: 7%;
-    margin-bottom : 7%;
-    border-radius: 5%;
-}
-#quotes{
-    background-color:whitesmoke;
-    margin-top: 7%;
-    margin-bottom: 7%;
-    border-radius: 5%;
-}
-#contactInfo{
-    background-color:rgb(64, 5, 119);
-    margin: 0%;
-    border-radius: 5%;
+    color: aliceblue;
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 [data-inviewport]{
-    opacity: 0;
+    opacity: 0; 
+    display: grid;
+    background: inherit;
 }
 
 [data-inviewport="slide"].is-inViewport{
-        opacity: 0;
-        animation: slide 3s cubic-bezier(1, 0, 0, 1)  normal forwards;
+    opacity: 0;
+    animation: slide 3s cubic-bezier(1, 0, 0, 1)  normal forwards;
 }
 
 [data-inviewport="reverse-slide"].is-inViewport{
     opacity: 0;
+    justify-content: end;
     animation: reverse-slide 2s cubic-bezier(1, 0, 0, 1)   normal forwards;
 }
 
@@ -67,28 +45,35 @@ a{
 @keyframes slide {
     from{
         opacity: 0;
-        transform: translateX(0px);
+        transform: translateX(0%);
     }
     to{
         opacity: 1;
-        transform: translateX(10px);}
+        transform: translateX(5%);}
     }
-    
     @keyframes reverse-slide {
-    from{
-        opacity: 0;
-        transform: translateX(100px);
+        from{
+            opacity: 0;
+            transform: translateX(0%);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(-5%);}
     }
-    to{
-        opacity: 1;
-        transform: translateX(90px);}
-}
-@keyframes top-2-bottom {
+ @keyframes top-2-bottom {
     from{
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(10%);
     }
     to{
         opacity: 1;
         transform: translateY(-10%);}
 }
+
+#coverPhoto{
+    width:100%;
+    height:40%;
+    border-radius:10%;
+    opacity: 0.9;
+ 
+}    
