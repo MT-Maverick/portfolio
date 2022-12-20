@@ -36,7 +36,7 @@ const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setClearColor(0x000000);
 renderer.setSize(window.innerWidth, window.innerHeight);
 
-const geometry = new THREE.SphereGeometry(8,20,20);
+const geometry = new THREE.SphereGeometry(8,40,40);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
 scene.add(shape);
@@ -55,12 +55,30 @@ function update() {
 }
 
 //morph object at set time:
-//setTimeout(()=>{ morph(shape,2,2);},8000);
+function change() {
+    setTimeout(()=>{ morph(shape,1,3,true);},4000);
+    setTimeout(()=>{ morph(shape,6,8,false);},8000);
+    setTimeout(()=>{ morph(shape,5,7,true);},12000);
+    setTimeout(()=>{ morph(shape,2,4,false);},16000);
+    setTimeout(()=>{ morph(shape,9,11,true);},20000);
+    setTimeout(()=>{ morph(shape,8,2,false);},24000);
+    setTimeout(()=>{ morph(shape,13,15,true);},28000);
+    setTimeout(()=>{ morph(shape,4,6,false);},32000);
+    setTimeout(()=>{ morph(shape,17,19,true);},36000);
+    setTimeout(()=>{ morph(shape,1,2,false);},40000);
+    setTimeout(()=>{ morph(shape,21,23,true);},44000);
+    setTimeout(()=>{ morph(shape,6,8,false);},48000);
+    setTimeout(()=>{ morph(shape,25,27,true);},52000);
+    setTimeout(()=>{ morph(shape,2,4,false);},56000);
+    setTimeout(()=>{ morph(shape,9,3,true);},60000);
+}   
+change();
+
 
 
 //morph object method:
-/*function morph(object,width,height){
-let condition = false;
+function morph(object,width,height,condition){
+
 let newGeometry = new THREE.SphereGeometry(8,width,height);
 let newMaterial = new THREE.MeshNormalMaterial({wireframe:condition});
 
@@ -74,4 +92,3 @@ object.traverse((obj)=>{
 });
 
 }
-*/
