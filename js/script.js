@@ -66,9 +66,9 @@ function change() {
     setTimeout(()=>{ morph(shape,4,6,false);},32000);
     setTimeout(()=>{ morph(shape,17,19,true);},36000);
     setTimeout(()=>{ morph(shape,1,2,false);},40000);
-    setTimeout(()=>{ morph(shape,21,23,true);},44000);
+    setTimeout(()=>{ morph(shape,7,9,true);},44000);
     setTimeout(()=>{ morph(shape,6,8,false);},48000);
-    setTimeout(()=>{ morph(shape,25,27,true);},52000);
+    setTimeout(()=>{ morph(shape,12,18,true);},52000);
     setTimeout(()=>{ morph(shape,2,4,false);},56000);
     setTimeout(()=>{ morph(shape,9,3,true);},60000);
 }   
