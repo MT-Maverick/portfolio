@@ -4,7 +4,7 @@ body{
 }
 .header{
     color: purple;
-    justify-items: center;
+    justify-content: center;    
 }
 a{
     text-decoration: none;
@@ -12,8 +12,10 @@ a{
 }
 #canvas{
     position:absolute;
+    z-index: -1;
 }
 .container{
+    text-size-adjust: 20;
     color: aliceblue;
     justify-content: center;
     padding-top: 10%;
@@ -71,10 +73,8 @@ a{
 }
 
 #coverPhoto{
-    
-    width:80%;
-height:40%;
     border-radius:10%;
     opacity: 0.9;
- 
+    width:120px;
+    height:120px;
 }    
