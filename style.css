@@ -11,6 +11,10 @@ a{
     text-decoration: none;
     color: white;
 }
+.img-links{
+    width: 20px;
+    height: 20px;
+}
 #canvas{
     position:absolute;
     z-index: -1;
