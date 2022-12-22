@@ -35,7 +35,7 @@ camera.lookAt(0,0,0);
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setClearColor(0x000000);
 renderer.setSize(window.innerWidth, window.innerHeight);
-
+renderer.setPixelRatio( window.devicePixelRatio );
 const geometry = new THREE.SphereGeometry(8,40,40);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
