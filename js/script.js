@@ -35,42 +35,33 @@ camera.lookAt(0,0,0);
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setClearColor(0x000000);
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setPixelRatio(window.devicePixelRatio);
 const geometry = new THREE.SphereGeometry(8,40,40);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
 scene.add(shape);
-
-update();
-
 
 //animation method:
 function update() {
     renderer.render(scene,camera);
     canvas.style.width = 100+"%";
     canvas.style.height = 100+"%";
-    shape.rotateY(0.003);
+    shape.rotateY(0.003);    
     requestAnimationFrame(update);
-    
+//    renderer.setSize(canvas.clientWidth,canvas.clientHeight);
+
 }
+update();
 
 //morph object at set time:
 function change() {
-    setTimeout(()=>{ morph(shape,1,3,true);},4000);
-    setTimeout(()=>{ morph(shape,6,8,false);},8000);
-    setTimeout(()=>{ morph(shape,5,7,true);},12000);
-    setTimeout(()=>{ morph(shape,2,4,false);},16000);
-    setTimeout(()=>{ morph(shape,9,11,true);},20000);
-    setTimeout(()=>{ morph(shape,8,2,false);},24000);
-    setTimeout(()=>{ morph(shape,13,15,true);},28000);
-    setTimeout(()=>{ morph(shape,4,6,false);},32000);
-    setTimeout(()=>{ morph(shape,17,19,true);},36000);
-    setTimeout(()=>{ morph(shape,1,2,false);},40000);
-    setTimeout(()=>{ morph(shape,7,9,true);},44000);
-    setTimeout(()=>{ morph(shape,6,8,false);},48000);
-    setTimeout(()=>{ morph(shape,12,18,true);},52000);
-    setTimeout(()=>{ morph(shape,2,4,false);},56000);
-    setTimeout(()=>{ morph(shape,9,3,true);},60000);
+    setTimeout(()=>{ morph(shape,9,3,true);},5000);
+    setTimeout(()=>{ morph(shape,19,49,false);},10000);
+    setTimeout(()=>{ morph(shape,6,5,true);},15000);
+    setTimeout(()=>{ morph(shape,2,19,true);},20000);
+    setTimeout(()=>{ morph(shape,9,3,false);},25000);
+    setTimeout(()=>{ morph(shape,50,1,true);},30000);
+    setTimeout(()=>{ morph(shape,1,50,true);},35000);
 }   
 change();
 
