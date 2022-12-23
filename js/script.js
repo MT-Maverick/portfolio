@@ -16,6 +16,48 @@ element.forEach(el=>{
 });
 }
 
+let svgObjects = document.getElementsByClassName("svgImg");
+    console.log(svgObjects);
+
+    let svgFrame = document.getElementsByClassName('svgFrame');
+    console.log(svgFrame);
+    svgFrame.item(0).style.width = "100%";
+    svgFrame.item(1).style.width = "100%";
+
+    
+    
+    let angle = Math.PI
+
+    function animate(time, lastTime) {
+        
+        if (lastTime != null) {
+            angle += Math.random()*0.001;
+        }
+        
+    svgObjects.item(0).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
+    svgObjects.item(0).style.cx = (100*Math.abs(Math.cos(angle)));
+        
+    svgObjects.item(1).style.cy = (100*Math.abs(0.5+Math.sin(angle)));
+    svgObjects.item(1).style.cx = (100*Math.abs(2*Math.cos(angle)));
+    
+    svgObjects.item(2).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
+    svgObjects.item(2).style.cx = (100*Math.abs(2*Math.cos(angle)));
+    
+    svgObjects.item(3).style.cy = (100*Math.abs(0.5*Math.sin(angle)));
+    svgObjects.item(3).style.cx = (100*Math.abs(-3*Math.cos(angle)));
+    
+    svgObjects.item(4).style.cy = (100*Math.abs(Math.sin(0.5+angle)));
+    svgObjects.item(4).style.cx = (100*Math.abs(2*Math.cos(angle)));
+    
+    svgObjects.item(5).style.cy = (100*Math.abs(Math.sin(0.5-angle)));
+    svgObjects.item(5).style.cx = (100*Math.abs(Math.cos(2*angle)));
+    
+    requestAnimationFrame(newTime => animate(newTime, time));
+    
+    
+}
+requestAnimationFrame(animate);
+
 //three.js code
 //essential three.js components:
     
