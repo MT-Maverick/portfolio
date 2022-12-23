@@ -11,16 +11,13 @@ a{
     text-decoration: none;
     color: white;
 }
-.img-links{
-    width: 15px;
-    height: 15px;
-}
+
+
 #canvas{
     position:absolute;
     z-index: -1;
 }
 .container{
-    text-size-adjust: 20;
     color: aliceblue;
     justify-content: center;
     padding-top: 15%;
@@ -86,3 +83,7 @@ a{
     width:120px;
     height:120px;
 }    
+.imgLinks{
+    width: 15px;
+    height: 15px;
+}
