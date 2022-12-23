@@ -34,23 +34,18 @@ let svgObjects = document.getElementsByClassName("svgImg");
             angle += Math.random()*0.001;
         }
         
-    svgObjects.item(0).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
-    svgObjects.item(0).style.cx = (100*Math.abs(Math.cos(angle)));
-        
-    svgObjects.item(1).style.cy = (100*Math.abs(0.5+Math.sin(angle)));
-    svgObjects.item(1).style.cx = (100*Math.abs(2*Math.cos(angle)));
     
-    svgObjects.item(2).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
+    svgObjects.item(0).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
+    svgObjects.item(0).style.cx = (100*Math.abs(2*Math.cos(angle)));
+    
+    svgObjects.item(1).style.cy = (100*Math.abs(0.5*Math.sin(angle)));
+    svgObjects.item(1).style.cx = (100*Math.abs(-3*Math.cos(angle)));
+    
+    svgObjects.item(2).style.cy = (100*Math.abs(Math.sin(0.5+angle)));
     svgObjects.item(2).style.cx = (100*Math.abs(2*Math.cos(angle)));
     
-    svgObjects.item(3).style.cy = (100*Math.abs(0.5*Math.sin(angle)));
-    svgObjects.item(3).style.cx = (100*Math.abs(-3*Math.cos(angle)));
-    
-    svgObjects.item(4).style.cy = (100*Math.abs(Math.sin(0.5+angle)));
-    svgObjects.item(4).style.cx = (100*Math.abs(2*Math.cos(angle)));
-    
-    svgObjects.item(5).style.cy = (100*Math.abs(Math.sin(0.5-angle)));
-    svgObjects.item(5).style.cx = (100*Math.abs(Math.cos(2*angle)));
+    svgObjects.item(3).style.cy = (100*Math.abs(Math.sin(0.5-angle)));
+    svgObjects.item(3).style.cx = (100*Math.abs(Math.cos(2*angle)));
     
     requestAnimationFrame(newTime => animate(newTime, time));
     
