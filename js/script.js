@@ -34,11 +34,11 @@ let svgObjects = document.getElementsByClassName("svgImg");
             angle += Math.random()*0.005;
         }
         
-    svgObjects.item(0).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
-    svgObjects.item(0).style.cx = (100*Math.abs(Math.cos(angle)));
+    svgObjects.item(0).style.cy = (100*Math.abs(Math.sin(0.5-angle)));
+    svgObjects.item(0).style.cx = (100*Math.abs(Math.cos(-1*angle)));
         
-    svgObjects.item(1).style.cy = (100*Math.abs(0.5+Math.sin(angle)));
-    svgObjects.item(1).style.cx = (100*Math.abs(2*Math.cos(angle)));
+    svgObjects.item(1).style.cy = (100*Math.abs(0.5+Math.sin(2*angle)));
+    svgObjects.item(1).style.cx = (100*Math.abs(2*Math.cos(1+angle)));
     
     svgObjects.item(2).style.cy = (100*Math.abs(0.5-Math.sin(angle)));
     svgObjects.item(2).style.cx = (100*Math.abs(2*Math.cos(angle)));
@@ -103,8 +103,8 @@ function change() {
     setTimeout(()=>{ morph(shape,6,5,true);},15000);
     setTimeout(()=>{ morph(shape,39,19,true);},20000);
     setTimeout(()=>{ morph(shape,9,3,false);},25000);
-    setTimeout(()=>{ morph(shape,39,1,true);},30000);
-    setTimeout(()=>{ morph(shape,1,39,true);},35000);
+    setTimeout(()=>{ morph(shape,39,2,true);},30000);
+    setTimeout(()=>{ morph(shape,2,39,true);},35000);
 }   
 change();
 
