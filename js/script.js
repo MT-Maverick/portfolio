@@ -99,12 +99,12 @@ update();
 //morph object at set time:
 function change() {
     setTimeout(()=>{ morph(shape,9,3,true);},5000);
-    setTimeout(()=>{ morph(shape,19,49,false);},10000);
+    setTimeout(()=>{ morph(shape,19,45,false);},10000);
     setTimeout(()=>{ morph(shape,6,5,true);},15000);
     setTimeout(()=>{ morph(shape,2,19,true);},20000);
     setTimeout(()=>{ morph(shape,9,3,false);},25000);
-    setTimeout(()=>{ morph(shape,50,1,true);},30000);
-    setTimeout(()=>{ morph(shape,1,50,true);},35000);
+    setTimeout(()=>{ morph(shape,45,1,true);},30000);
+    setTimeout(()=>{ morph(shape,1,45,true);},35000);
 }   
 change();
 
