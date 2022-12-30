@@ -31,7 +31,7 @@ let svgObjects = document.getElementsByClassName("svgImg");
     function animate(time, lastTime) {
         
         if (lastTime != null) {
-            angle += Math.random()*0.005;
+            angle += Math.random()*0.002;
         }
         
     svgObjects.item(0).style.cy = (100*Math.abs(Math.sin(0.5-angle)));
