@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BudgetApp</title>
+</head>
+   
+<body>
+    <div class="Parent-DOM">
+        
+        <div class="Title">
+            <h1 class="Title-Text"> Budget App</h1>
+        </div>
+
+        <div class="Budget-Header-Container">
+            <center>
+                <div class="Balance">
+                    <div class="balance-title">
+                        <h1>Total Balance</h1>
+                    </div>
+    
+                    <div class="balance-value">
+                        <h2>R0</h2>
+                    </div>
+                    
+                </div>
+    
+            </center>
+            <div class="amount">
+        
+                <div class="Income">
+                    <div class="income-title"><h2>Income</h2></div>
+                    <div class="income-value"> R0 </div>
+                </div>
+        
+                <canvas class="Chart"></canvas>
+
+                <div class="Expenses">
+                    <div class="expenese-title"><h2>Expenses</h2></div>
+                    <div class="expenses-value"> R0 </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="Dashboard-Title">
+            <h2>Ledger</h2>
+        </div>
+        
+        <div class="Budget-Dashboard">
+            
+
+            <div class="Tab-Buttons">
+                <div class="Expense-Button inactive">Expense</div>
+                <div class="Income-Button inactive">Income</div>
+                <div class="All-Button active ">All</div>
+            </div>
+            
+            <div class="hide" id="Expenses">
+            
+                <ul class="Expense-List"> </ul>
+                <div class="Expense-Input">
+                    <input type="Text" id="Expense-Title-Input" name="Title" placeholder="enter expense">
+                    <input type="Number" id="Expense-Value-Amount" name="Amount" placeholder="R0">
+                    <img class="Expense-Input" src="./enter.png" alt="New Task"> 
+                </div>
+            
+            </div>
+            
+            <div class="hide" id="Income">
+            
+                <ul class="Income-List"> </ul>
+                <div class="Income-Input"> 
+                    <input type="Text" id="Income-Title-Input" name="Title" placeholder="enter income">
+                    <input type="Number" id="Income-Value-Amount" name="Amount" placeholder="R0"> 
+                    <img class="Income-Input" src="./enter.png" alt="New Task">
+                 </div>
+            
+            </div>
+
+            <div id="All">
+                <ul class="All-List"> </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</body>
+</html>

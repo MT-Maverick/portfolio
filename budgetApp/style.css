@@ -1,0 +1,169 @@
+.Parent-DOM{
+    margin:0%;
+ }
+ 
+ .amount{
+     display:flex;
+     justify-content: space-between;
+ }
+ 
+ .Title{
+     background-color:slategrey;
+     text-align: center;
+     border-radius: 5%;
+     padding: 1%;
+ 
+ }
+ 
+ .Title-Text{
+     color:white;
+ }
+ 
+ .Balance{
+     margin-block-end: 10%;
+     color: blue;
+     
+ }
+ 
+ .income{
+     display: flex;
+     justify-content: space-around;
+ }
+ .expense{
+     display: flex;
+     justify-content: space-around;
+ }
+ .all{
+     display: flex;
+     justify-content: space-around;
+ }
+ 
+ .Income{
+     color:green;
+     vertical-align: baseline;
+     text-align: end;
+ }
+ .Expenses{
+     vertical-align: baseline;
+     color: red;
+ 
+ }
+ .Budget-Dashboard{
+     background-color:honeydew;
+     display: grid;
+     justify-content: center;
+     margin: 0%;
+ }
+ 
+ .balance-value{
+     max-height: 100px;
+     max-width: 100px;
+     padding-left: 10px;
+ }
+ 
+ .Dashboard-Title{
+     color:grey;
+     text-align: center;
+ }
+ #Income{
+     background-color: honeydew;
+ }
+ .Income-List{
+     max-height: fit-content;
+     min-height: 200px;
+     color:green;
+     marker: none;
+     padding-top: 7%;
+ }
+ #Expenses{
+     background-color: honeydew;
+ }
+ .Expense-List{
+     max-height: fit-content;
+     min-height: 200px;
+     color: red;
+     marker: none;
+     padding-top: 7%;
+ }
+ .All-List{
+     max-height: fit-content;
+     min-height: 200px;
+     color: unset;
+     marker: none;
+     padding-top: 7%;
+ }
+ .Income-Button{
+     color: green;
+     padding-left: 5%;
+ }
+ .Expense-Button{
+     color:red;
+     padding-left: 5%;
+ }
+ .All-Button {
+     color:blue;
+     padding-left: 5%;
+ }
+ .income-entry{
+     marker: none;
+     color:green;
+ }
+ .expense-entry{
+     marker: none;
+     color:red;
+ }
+ 
+ .Add-Task{
+     float: right;
+     max-width: 30px;
+     height:30px ;
+ }
+ .hide{
+     display:none;
+ }
+ .active{
+     opacity: 1 !important;
+ }
+ .Tab-Buttons{
+     display: flex;
+     justify-content: center;
+     background-color: honeydew;
+ }
+ .inactive{
+     opacity: 0.5;
+ }
+ 
+ .Expense-Input{
+     display: flex;
+     justify-content:center;
+     max-height: 30px;
+     min-height: fit-content;
+ }
+ 
+ .Income-Input{
+     display: flex;
+     justify-content:space-around;
+     max-height: 30px;
+     min-height: fit-content;
+     
+ }
+ 
+ #delete{
+     float: right;
+     max-height: 23px;
+     max-width: 23px;
+     padding-right: 8px;
+     padding-bottom: 8px;
+ }
+ #Expense-Value-Amount{
+     text-align: end;
+ }
+ #Expense-Title-Input{
+     text-align: end;
+ }
+ #Income-Value-Amount{
+     text-align: end;
+ }
+ #Income-Title-Input{
+     text-align: end;
+ }
