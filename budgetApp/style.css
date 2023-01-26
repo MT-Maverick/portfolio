@@ -136,14 +136,14 @@
  .Expense-Input{
      display: flex;
      justify-content:center;
-     max-height: 30px;
+     max-height: 50px;
      min-height: fit-content;
  }
  
  .Income-Input{
      display: flex;
      justify-content:space-around;
-     max-height: 30px;
+     max-height: 50px;
      min-height: fit-content;
      
  }
