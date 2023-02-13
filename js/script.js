@@ -87,10 +87,9 @@ scene.add(shape);
 //window resize && animation method:
 function update() {
     renderer.render(scene,camera);
-    canvas.style.width = 90+"%";
-    canvas.style.height = 90+"%";
-    shape.rotateY(0.003);
-    shape.rotateX(0.003)    
+    canvas.style.width = 100+"%";
+    canvas.style.height = 100+"%";
+    shape.rotateY(0.004);
     requestAnimationFrame(update);
 //    renderer.setSize(canvas.clientWidth,canvas.clientHeight);
 
