@@ -79,7 +79,7 @@ renderer.setClearColor("whitesmoke");
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-const geometry = new THREE.SphereGeometry(8,40,40);
+const geometry = new THREE.SphereGeometry(8,50,50);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
 scene.add(shape);
@@ -87,8 +87,8 @@ scene.add(shape);
 //window resize && animation method:
 function update() {
     renderer.render(scene,camera);
-    canvas.style.width = 70+"%";
-    canvas.style.height = 70+"%";
+    canvas.style.width = 90+"%";
+    canvas.style.height = 90+"%";
     shape.rotateY(0.003);
     shape.rotateX(0.003)    
     requestAnimationFrame(update);
