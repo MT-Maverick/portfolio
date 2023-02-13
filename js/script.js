@@ -76,7 +76,7 @@ camera.lookAt(0,0,0);
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setClearColor("whitesmoke");
-renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+renderer.setSize(50%, 50%);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const geometry = new THREE.SphereGeometry(8,40,40);
@@ -87,8 +87,8 @@ scene.add(shape);
 //window resize && animation method:
 function update() {
     renderer.render(scene,camera);
-    canvas.style.width = 100+"%";
-    canvas.style.height = 100+"%";
+    canvas.style.width = 50+"%";
+    canvas.style.height = 50+"%";
     shape.rotateY(0.003);    
     requestAnimationFrame(update);
 //    renderer.setSize(canvas.clientWidth,canvas.clientHeight);
