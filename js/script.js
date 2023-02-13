@@ -76,10 +76,10 @@ camera.lookAt(0,0,0);
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setClearColor("whitesmoke");
-renderer.setSize(50%, 50%);
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
-const geometry = new THREE.SphereGeometry(8,20,20);
+const geometry = new THREE.SphereGeometry(8,40,40);
 const material = new THREE.MeshNormalMaterial({wireframe:true});
 const shape = new THREE.Mesh(geometry,material);
 scene.add(shape);
