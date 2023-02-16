@@ -75,8 +75,8 @@ camera.lookAt(0,0,0);
 
 
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
-renderer.setClearColor("whitesmoke");
-renderer.setSize((window.innerWidth/2), (window.innerHeight/2));
+renderer.setClearColor("black");
+renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const geometry = new THREE.SphereGeometry(8,50,50);
