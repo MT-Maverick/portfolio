@@ -1,7 +1,7 @@
 
 body{
+    margin: 0;
     background-color: black;
-    margin: 0%;
 }
 .header{
     color: rgba(67, 3, 150, 0.719);
@@ -12,16 +12,16 @@ a{
     color: purple;
 }
 h5{
-text-color:white;
+color:white;
 }
 p{
- text-color:white;
+color:white;
 }
 i{
-  text-color:white;
+color:white;
 }
 h3{
-text-color:white;
+color:purple;
 }
 
 #canvas{
@@ -46,18 +46,26 @@ text-color:white;
 
 [data-inviewport="slide"].is-inViewport{
     opacity: 0;
-    animation: slide 3s cubic-bezier(1, 0, 0, 1)  normal forwards;
+    animation: slide 2s cubic-bezier(1, 0, 0, 1)  normal forwards;
+    border-bottom-width:unset;
+    border-top-style: none;
 }
 
 [data-inviewport="reverse-slide"].is-inViewport{
     opacity: 0;
     justify-content: end;
     animation: reverse-slide 2s cubic-bezier(1, 0, 0, 1)   normal forwards;
+    border-bottom-width:unset;
+    border-top-style: none;
+
 }
 
 [data-inviewport="top-2-bottom"].is-inViewport{
     opacity: 0;
     animation: top-2-bottom 2s cubic-bezier(1, 0, 0, 1)  normal forwards;
+    border-bottom-width:unset;
+    border-top-style: none;
+
 }
 
 @keyframes slide {
